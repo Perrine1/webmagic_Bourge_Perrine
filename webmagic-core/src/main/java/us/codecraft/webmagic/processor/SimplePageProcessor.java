@@ -17,6 +17,10 @@ public class SimplePageProcessor implements PageProcessor {
 
     private Site site;
 
+    /**
+     * 
+     * @param urlPattern url pattern to extract links to fetch
+     */
     public SimplePageProcessor(String urlPattern) {
         this.site = Site.me();
         //compile "*" expression to regex
