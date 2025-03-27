@@ -8,14 +8,26 @@ package us.codecraft.webmagic.selector;
  */
 public abstract class Selectors {
 
+    /**
+     * Create a new selector with regex expression.<br>
+     * @param expr
+     * @return
+     */
     public static RegexSelector regex(String expr) {
         return new RegexSelector(expr);
     }
 
+    /**
+     * Create a new selector with regex expression and group.<br>
+     * @param expr
+     * @param group
+     * @return
+     */
     public static RegexSelector regex(String expr, int group) {
         return new RegexSelector(expr,group);
     }
 
+    
     public static SmartContentSelector smartContent() {
         return new SmartContentSelector();
     }
