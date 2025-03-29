@@ -18,7 +18,6 @@ import us.codecraft.webmagic.utils.HttpConstant;
 
 import java.io.Closeable;
 import java.io.IOException;
-import java.net.http.HttpRequest;
 import java.util.Map;
 
 /**
@@ -39,7 +38,6 @@ public class SeleniumDownloader extends AbstractDownloader implements Closeable 
 
     private int poolSize = 1;
 
-    private static final String DRIVER_PHANTOMJS = "phantomjs";
 
     /**
      * 新建
@@ -50,16 +48,7 @@ public class SeleniumDownloader extends AbstractDownloader implements Closeable 
         System.getProperties().setProperty("webdriver.chrome.driver",
                 chromeDriverPath);
     }
-
-    /**
-     * Constructor without any filed. Construct PhantomJS browser
-     *
-     * @author bob.li.0718@gmail.com
-     */
-    public SeleniumDownloader() {
-        // System.setProperty("phantomjs.binary.path",
-        // "/Users/Bingo/Downloads/phantomjs-1.9.7-macosx/bin/phantomjs");
-    }
+   
 
     /**
      * set sleep time to wait until load success
