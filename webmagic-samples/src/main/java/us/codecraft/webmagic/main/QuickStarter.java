@@ -17,6 +17,9 @@ import java.util.Scanner;
  */
 public class QuickStarter {
 
+    private static final int DEMO_DURATION = 20000; // Duration of the demo in milliseconds
+
+    
     private static Map<String, Class> clazzMap;
 
     private static Map<String, String> urlMap;
@@ -41,7 +44,7 @@ public class QuickStarter {
         OOSpider.create(Site.me(), clazzMap.get(key)).addUrl(urlMap.get(key)).addPipeline(new MultiPagePipeline()).addPipeline(new ConsolePipeline()).runAsync();
 
         try {
-            Thread.sleep(20000);
+            Thread.sleep(DEMO_DURATION);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
