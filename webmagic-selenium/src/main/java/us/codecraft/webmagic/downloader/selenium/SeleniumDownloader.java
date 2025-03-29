@@ -76,7 +76,7 @@ public class SeleniumDownloader extends AbstractDownloader implements Closeable 
     public Page download(Request request, Task task) {
         checkInit();
         WebDriver webDriver = null;
-        Page page = Page.fail(request);
+        Page page = Page.ofFailure(request);
         try {
             webDriver = webDriverPool.get();
 
