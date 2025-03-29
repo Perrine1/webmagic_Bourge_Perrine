@@ -30,31 +30,26 @@ import org.slf4j.LoggerFactory;
  *         Time: 下午1:41 <br>
  */
 class WebDriverPool {
-	private Logger logger = LoggerFactory.getLogger(getClass());
+	private static final Logger logger = LoggerFactory.getLogger(WebDriverPool.class);
 
-	private final static int DEFAULT_CAPACITY = 5;
-
-	private final int capacity;
-
-	private final static int STAT_RUNNING = 1;
-
-	private final static int STAT_CLODED = 2;
-
-	private AtomicInteger stat = new AtomicInteger(STAT_RUNNING);
-
-	/*
-	 * new fields for configuring phantomJS
-	 */
-	private WebDriver mDriver = null;
-	private boolean mAutoQuitDriver = true;
-
+	private static final int DEFAULT_CAPACITY = 5;
+	private static final int STAT_RUNNING = 1;
+	private static final int STAT_CLOSED = 2; 
+	
 	private static final String DEFAULT_CONFIG_FILE = "/data/webmagic/webmagic-selenium/config.ini";
 	private static final String DRIVER_FIREFOX = "firefox";
 	private static final String DRIVER_CHROME = "chrome";
 	private static final String DRIVER_PHANTOMJS = "phantomjs";
-
+	
 	protected static Properties sConfig;
 	protected static DesiredCapabilities sCaps;
+	
+	private final int capacity;
+	private final AtomicInteger stat = new AtomicInteger(STAT_RUNNING);
+	
+	private WebDriver mDriver = null;
+	private boolean mAutoQuitDriver = true;
+
 
 	/**
 	 * Configure the GhostDriver, and initialize a WebDriver instance. This part
