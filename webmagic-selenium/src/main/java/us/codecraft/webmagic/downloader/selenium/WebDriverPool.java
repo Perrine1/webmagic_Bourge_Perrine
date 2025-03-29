@@ -138,33 +138,6 @@ class WebDriverPool {
 		}
 	}
 
-	/**
-	 * check whether input is a valid URL
-	 *
-	 * @author bob.li.0718@gmail.com
-	 * @param urlString urlString
-	 * @return true means yes, otherwise no.
-	 */
-	private boolean isUrl(String urlString) {
-		try {
-			new URL(urlString);
-			return true;
-		} catch (MalformedURLException mue) {
-			return false;
-		}
-	}
-
-	/**
-	 * store webDrivers created
-	 */
-	private List<WebDriver> webDriverList = Collections
-			.synchronizedList(new ArrayList<WebDriver>());
-
-	/**
-	 * store webDrivers available
-	 */
-	private BlockingDeque<WebDriver> innerQueue = new LinkedBlockingDeque<WebDriver>();
-
 	public WebDriverPool(int capacity) {
 		this.capacity = capacity;
 	}
@@ -213,11 +186,6 @@ class WebDriverPool {
 		innerQueue.add(webDriver);
 	}
 
-	protected void checkRunning() {
-		if (!stat.compareAndSet(STAT_RUNNING, STAT_RUNNING)) {
-			throw new IllegalStateException("Already closed!");
-		}
-	}
 
 	public void closeAll() {
 		boolean b = stat.compareAndSet(STAT_RUNNING, STAT_CLODED);
@@ -231,4 +199,39 @@ class WebDriverPool {
 		}
 	}
 
+	protected void checkRunning() {
+		if (!stat.compareAndSet(STAT_RUNNING, STAT_RUNNING)) {
+			throw new IllegalStateException("Already closed!");
+		}
+	}
+
+
+	/**
+	 * check whether input is a valid URL
+	 *
+	 * @author bob.li.0718@gmail.com
+	 * @param urlString urlString
+	 * @return true means yes, otherwise no.
+	 */
+	private boolean isUrl(String urlString) {
+		try {
+			new URL(urlString);
+			return true;
+		} catch (MalformedURLException mue) {
+			return false;
+		}
+	}
+
+	/**
+	 * store webDrivers created
+	 */
+	private List<WebDriver> webDriverList = Collections
+			.synchronizedList(new ArrayList<WebDriver>());
+
+	/**
+	 * store webDrivers available
+	 */
+	private BlockingDeque<WebDriver> innerQueue = new LinkedBlockingDeque<WebDriver>();
+
+	
 }
