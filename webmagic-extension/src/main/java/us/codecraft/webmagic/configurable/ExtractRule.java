@@ -94,7 +94,8 @@ public class ExtractRule {
             case JsonPath:
                 return new JsonPathSelector(expressionValue);
             default:
-                return xpath(expressionValue);
+                throw new IllegalArgumentException("Unknown expression type: " + expressionType);
+
         }
     }
 
