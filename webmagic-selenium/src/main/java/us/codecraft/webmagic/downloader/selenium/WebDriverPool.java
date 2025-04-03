@@ -173,7 +173,7 @@ class WebDriverPool {
 
 
 	public void closeAll() {
-		boolean b = stat.compareAndSet(STAT_RUNNING, STAT_CLODED);
+		boolean b = stat.compareAndSet(STAT_RUNNING, STAT_CLOSED);
 		if (!b) {
 			throw new IllegalStateException("Already closed!");
 		}
