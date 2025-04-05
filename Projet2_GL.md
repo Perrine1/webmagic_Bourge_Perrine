@@ -76,9 +76,10 @@ Une méthode a été modifiée pour qu’elle lève explicitement une exception 
 
 ---
 
-### Suppression de code mort : 
+### Traduction des commentaires en chinois
+Beaucoup de commentaires sont en chinois, ce qui rend une partie du projet peu clair pour des personnes ne parlant pas cette langue. Il serait donc pertinant d'uniformmiser les commentaires pour qu'ils soient tous propsé en anglais commme c'est déjà le cas pour le readme principale. Néanmoins, ne parlant pas cette langue, je ne peux pas effectuer cette modification.
 
 ---
 
-### Traduction des commentaires en chinois
-Beaucoup de commentaires sont en chinois, ce qui rend une partie du projet peu clair pour des personnes ne parlant pas cette langue. Il serait donc pertinant d'uniformmiser les commentaires pour qu'ils soient tous propsé en anglais commme c'est déjà le cas pour le readme principale. Néanmoins, ne parlant pas cette langue, je ne peux pas effectuer cette modification.
+### Décomposition d'une "God class"
+J'ai essayé de décomposer la classe `Spider` qui est une God class mais je n'y suis pas parvenu, elle gère beaucoup trop de chose en même temps et il est très difficile de la décomposé à cause de toutes les imbrications. L'idée était de décomposer cette classe en 6 classes. La principale étant `Spider`, qui devait gérer la coordination entres les autres classes, une classe `RequestManager` pour la gestion des requêtes, `PipelineRequest` pour la gestion des pipelines, `DownloaderManager`, pour la gestion des téléchargements. `ThreadManager` pour gérer les threads et `SpiderListenerManager ` pour la gestion des évènements.
