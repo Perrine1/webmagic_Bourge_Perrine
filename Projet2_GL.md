@@ -1,0 +1,84 @@
+# Projet GL - Partie 2  
+**Nom :** Bourge Perrine
+
+---
+
+## Améliorations apportées :
+
+---
+
+### Ajout de documentation en anglais
+Ajouter de la documentation améliore la clarté du code. Cela permet de comprendre rapidement le rôle d’une méthode sans devoir lire en détail toute son implémentation. Cela facilite également le travail collaboratif.
+
+**Commits :**  
+- [d0049a8](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/d0049a895348a4d2a7ca54fcc33d7917fb05efb9)  
+- [777fd5b](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/777fd5b372a442a1cbcc91d0d3375d9f8e14b4b6)
+
+---
+
+### Simplification et décomposition d’une méthode
+Des méthodes longues ont été décomposées en plusieurs plus petites. Cela permet une meilleure lisibilité, favorise la maintenance, et suit le principe de responsabilité unique (Single Responsibility Principle).
+
+**Commits :**  
+- [84c35ee](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/84c35eeceb746a7d4f01b610e48c4d0516a3c207)  
+- [fe7f0af](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/fe7f0af6451df99c24e314d32343c554429175a5)
+
+---
+
+### Suppression et remplacement de code déprécié
+Les méthodes obsolètes ont été remplacées par des alternatives plus récentes, ce qui permet d’assurer la compatibilité avec les nouvelles versions des bibliothèques utilisées.
+
+**Commits :**  
+- [69e036e](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/69e036e965c027e4226a1880215b910a2aa22d24)  
+- [323c060](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/323c0602ea045c243fb4d21e345d17af5cb0f1dc)
+
+---
+
+### Suppression de "nombres magiques"
+Les valeurs numériques utilisées directement dans le code ont été remplacées par des constantes nommées, déclarées en haut de classe. Cela améliore la compréhension et permet une modification centralisée.
+
+**Commit :**  
+- [68a770d](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/68a770d0e47b8cf664370de7805328b01bbaffbb)
+
+---
+
+### Suppression de code mort
+Du code inutilisé a été supprimé, ce qui réduit l’encombrement et améliore la lisibilité générale du projet.
+
+**Commit :**  
+- [9842b0d](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/9842b0d082ea5e7b9692e1f07cd6256addc48e07)
+
+---
+
+### Réorganisation de l’ordre des attributs et des méthodes
+Les variables et méthodes ont été réorganisées selon les conventions suivantes :
+- Constantes `static final` en haut
+- Attributs d’instance ensuite
+- Méthodes par visibilité : `public`, puis `protected`, `private`
+
+Cela permet une lecture plus cohérente et structurée des classes.
+
+**Commits :**  
+- [a8b529e](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/a8b529edffe30154d8c4bbc3596d8c0ef5dac44f)  
+- [f943722](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/f94372294a4e8d162f71a999baddbf3505581201)
+
+---
+
+### Lancement d’une exception en cas de valeur non reconnue
+Une méthode a été modifiée pour qu’elle lève explicitement une exception lorsqu’elle reçoit une valeur invalide ou inconnue. Cela permet d’éviter des comportements silencieux ou inattendus.
+
+**Commit :**  
+- [83536e2](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/83536e284f55c8d063e5c7ab367651d2a81e12f9)
+
+---
+
+## Tentatives d'améliorations non aboutis :
+
+---
+
+### Suppression de code mort : 
+
+---
+
+### Traduction des commentaires en chinois
+Beaucoup de commentaires sont en chinois, ce qui rend une partie du projet peu clair pour des personnes ne parlant pas cette langue. Il serait donc pertinant d'uniformmiser les commentaires pour qu'ils soient tous propsé en anglais commme c'est déjà le cas pour le readme principale. Néanmoins, ne parlant pas cette langue, je ne peux pas effectuer cette modification.
