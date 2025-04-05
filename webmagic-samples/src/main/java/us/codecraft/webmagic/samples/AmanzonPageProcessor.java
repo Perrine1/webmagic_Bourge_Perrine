@@ -31,11 +31,7 @@ public class AmanzonPageProcessor implements PageProcessor{
                 String createTime = tempHtml.xpath("//td[3]/text()").toString();
                 System.out.println(createTime);
 
-				/* Document doc = Jsoup.parse(questionList.get(i));
-				 Html hmt  = Html.create(questionList.get(i)) ;
-			     String str = hmt.links().toString();
-				  String   content =   doc.getElementsByTag("a").text();
-				  String ss = doc.text();*/
+				
 
             }
         }
