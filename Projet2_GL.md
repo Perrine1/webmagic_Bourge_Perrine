@@ -71,6 +71,13 @@ Une méthode a été modifiée pour qu’elle lève explicitement une exception 
 - [83536e2](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/83536e284f55c8d063e5c7ab367651d2a81e12f9)
 
 ---
+### Ajout d'un try catch pour gérer les erreurs
+Une méthode a été modifiée pour mieux gérer les exceptions. Cette méthode gérait les exceptions en retournant -1 ce qui pouvait poser problème, car l'erreur n'était pas clairement défini. L'utilisation d'un try catch permet de rendre cela plus clair et de simplifier la gestion des erreurs lorsque cette méthode est appelée.
+
+**Commit :**
+[83536e2](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/f7c3dc30e0f057da7902e3c9c1eda6f2c0ff15ee)
+
+---
 
 ### Suppression de code commenté
 Une méthode contenait du code commenté, ce code n'était donc pas utile et nuisait à la clareté.
