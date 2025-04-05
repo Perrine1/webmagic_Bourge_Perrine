@@ -29,13 +29,22 @@ public class SpiderStatus implements SpiderStatusMXBean {
         return spider.getUUID();
     }
 
+
     public int getLeftPageCount() {
-        if (spider.getScheduler() instanceof MonitorableScheduler) {
-            return ((MonitorableScheduler) spider.getScheduler()).getLeftRequestsCount(spider);
+        try {
+            if (spider.getScheduler() instanceof MonitorableScheduler) {
+                return ((MonitorableScheduler) spider.getScheduler()).getLeftRequestsCount(spider);
+            }
+            String errorMessage = "Scheduler does not implement MonitorableScheduler. Unable to retrieve left page count.";
+            logger.warn(errorMessage);
+            throw new IllegalStateException(errorMessage); // Lancer une exception avec un message d'erreur clair
+        } catch (Exception e) {
+            String errorMessage = "An error occurred while getting the left page count: " + e.getMessage();
+            logger.error(errorMessage, e); // Loguer l'erreur avec le message et l'exception
+            throw new IllegalStateException(errorMessage, e); // Propager l'exception avec un message détaillé
         }
-        logger.warn("Get leftPageCount fail, try to use a Scheduler implement MonitorableScheduler for monitor count!");
-        return -1;
     }
+    
 
     public int getTotalPageCount() {
         if (spider.getScheduler() instanceof MonitorableScheduler) {
