@@ -71,7 +71,7 @@ class WebDriverPool {
 	    sConfig.load(new FileReader(configFile));
 	}
 	
-	private void prepareCapabilities() {
+	private void prepareCapabilities() throws IOException {
 	    sCaps = new DesiredCapabilities();
 	    sCaps.setCapability("takesScreenshot", false);
 	
