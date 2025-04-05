@@ -37,11 +37,11 @@ public class SpiderStatus implements SpiderStatusMXBean {
             }
             String errorMessage = "Scheduler does not implement MonitorableScheduler. Unable to retrieve left page count.";
             logger.warn(errorMessage);
-            throw new IllegalStateException(errorMessage); // Lancer une exception avec un message d'erreur clair
+            throw new IllegalStateException(errorMessage); 
         } catch (Exception e) {
             String errorMessage = "An error occurred while getting the left page count: " + e.getMessage();
-            logger.error(errorMessage, e); // Loguer l'erreur avec le message et l'exception
-            throw new IllegalStateException(errorMessage, e); // Propager l'exception avec un message détaillé
+            logger.error(errorMessage, e); 
+            throw new IllegalStateException(errorMessage, e); // give a more specific exception message
         }
     }
     
