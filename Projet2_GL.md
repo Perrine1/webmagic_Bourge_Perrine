@@ -72,6 +72,14 @@ Une méthode a été modifiée pour qu’elle lève explicitement une exception 
 
 ---
 
+### Suppression de code commenté
+Une méthode contenait du code commenté, ce code n'était donc pas utile et nuisait à la clareté.
+
+**Commit :**
+- [f2271c8](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/f2271c819a245a10fd50760f190709d06a8090b1)
+
+---
+
 ## Tentatives d'améliorations non aboutis :
 
 ---
@@ -83,3 +91,8 @@ Beaucoup de commentaires sont en chinois, ce qui rend une partie du projet peu c
 
 ### Décomposition d'une "God class"
 J'ai essayé de décomposer la classe `Spider` qui est une God class mais je n'y suis pas parvenu, elle gère beaucoup trop de chose en même temps et il est très difficile de la décomposé à cause de toutes les imbrications. L'idée était de décomposer cette classe en 6 classes. La principale étant `Spider`, qui devait gérer la coordination entres les autres classes, une classe `RequestManager` pour la gestion des requêtes, `PipelineRequest` pour la gestion des pipelines, `DownloaderManager`, pour la gestion des téléchargements. `ThreadManager` pour gérer les threads et `SpiderListenerManager ` pour la gestion des évènements.
+
+---
+
+### Simplification d'un test
+J'ai essayé de modifier la classe de test `XpathSelectorTest` afin de créer un fichier html et appeler ce fichier dans la variable correspondant afin de simplifier la gestion de cette classe mais je n'y suis pas parvenu. J'ai rencontrer des difficultées pour créer le fihcier html du fait de sa taille et du fait qu'il fallait en adapter le format pour qu'il soit valide.
