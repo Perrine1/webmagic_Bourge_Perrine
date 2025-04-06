@@ -105,10 +105,10 @@ Suppression d’un `@Ignore` qui empêchait l’exécution d’un test sans rais
 ---
 
 ### Suppression de duplication de code
-Ajout d'une classe abstraite contenant le code qui était à l'origine dupliqué dans deux classes différentes.
+Ajout d'une classe abstraite contenant le code qui était à l'origine dupliqué dans deux classes différentes. Cela permet de faciliter la maintenance, car si il faut modifier cette partie du projet, il faut le faire qu'à un seul endroit.
 
 **Commit :** 
-[771d5ac](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/771d5ac6f777a2eb60895cfe9fc46cb1e8647945)
+- [771d5ac](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/771d5ac6f777a2eb60895cfe9fc46cb1e8647945)
 
 ---
 
