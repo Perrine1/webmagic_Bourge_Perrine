@@ -12,7 +12,7 @@ import us.codecraft.webmagic.selector.PlainText;
 /**
  * @author code4crafter@gmail.com
  */
-public class ProcessorBenchmark {
+public class ProcessorBenchmarkTest {
 
     @Ignore
     @Test
