@@ -14,7 +14,7 @@ import us.codecraft.webmagic.selector.PlainText;
  */
 public class ProcessorBenchmarkTest {
 
-    @Ignore
+    
     @Test
     public void test() {
         ModelPageProcessor modelPageProcessor = ModelPageProcessor.create(Site.me(), OschinaBlog.class);
