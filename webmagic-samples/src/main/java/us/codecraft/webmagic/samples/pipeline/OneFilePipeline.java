@@ -30,18 +30,7 @@ public class OneFilePipeline extends FilePersistentBase implements Pipeline {
 
     @Override
     public synchronized void process(ResultItems resultItems, Task task) {
-        printWriter.println("url:\t" + resultItems.getRequest().getUrl());
-        for (Map.Entry<String, Object> entry : resultItems.getAll().entrySet()) {
-            if (entry.getValue() instanceof Iterable) {
-                Iterable value = (Iterable) entry.getValue();
-                printWriter.println(entry.getKey() + ":");
-                for (Object o : value) {
-                    printWriter.println(o);
-                }
-            } else {
-                printWriter.println(entry.getKey() + ":\t" + entry.getValue());
-            }
-        }
+        writeResultItems(resultItems, printWriter);
         printWriter.flush();
     }
 }

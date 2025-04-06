@@ -8,7 +8,7 @@ import java.io.File;
  * @author code4crafter@gmail.com <br>
  * @since 0.2.0
  */
-public class FilePersistentBase {
+public class FilePersistentBase extends AbstractPipeline {
 
     protected String path;
 
