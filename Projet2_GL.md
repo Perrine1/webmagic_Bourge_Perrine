@@ -7,7 +7,7 @@
 
 ---
 
-### Ajout de documentation en anglais
+### Ajout de documentation en anglais  
 Ajouter de la documentation améliore la clarté du code. Cela permet de comprendre rapidement le rôle d’une méthode sans devoir lire en détail toute son implémentation. Cela facilite également le travail collaboratif.
 
 **Commits :**  
@@ -16,8 +16,8 @@ Ajouter de la documentation améliore la clarté du code. Cela permet de compren
 
 ---
 
-### Simplification et décomposition d’une méthode
-Des méthodes longues ont été décomposées en plusieurs plus petites. Cela permet une meilleure lisibilité, favorise la maintenance, et suit le principe de responsabilité unique (Single Responsibility Principle).
+### Simplification et décomposition d’une méthode  
+Des méthodes longues ont été décomposées en plusieurs plus petites. Cela permet une meilleure lisibilité, facilite la maintenance, et respecte le principe de responsabilité unique (Single Responsibility Principle).
 
 **Commits :**  
 - [84c35ee](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/84c35eeceb746a7d4f01b610e48c4d0516a3c207)  
@@ -25,7 +25,7 @@ Des méthodes longues ont été décomposées en plusieurs plus petites. Cela pe
 
 ---
 
-### Suppression et remplacement de code déprécié
+### Suppression et remplacement de code déprécié  
 Les méthodes obsolètes ont été remplacées par des alternatives plus récentes, ce qui permet d’assurer la compatibilité avec les nouvelles versions des bibliothèques utilisées.
 
 **Commits :**  
@@ -34,15 +34,15 @@ Les méthodes obsolètes ont été remplacées par des alternatives plus récent
 
 ---
 
-### Suppression de "nombres magiques"
-Les valeurs numériques utilisées directement dans le code ont été remplacées par des constantes nommées, déclarées en haut de classe. Cela améliore la compréhension et permet une modification centralisée.
+### Suppression de "nombres magiques"  
+Les valeurs numériques utilisées directement dans le code ont été remplacées par des constantes nommées, déclarées en haut de la classe. Cela améliore la compréhension et permet une modification centralisée.
 
 **Commit :**  
 - [68a770d](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/68a770d0e47b8cf664370de7805328b01bbaffbb)
 
 ---
 
-### Suppression de code mort
+### Suppression de code mort  
 Du code inutilisé a été supprimé, ce qui réduit l’encombrement et améliore la lisibilité générale du projet.
 
 **Commit :**  
@@ -50,11 +50,11 @@ Du code inutilisé a été supprimé, ce qui réduit l’encombrement et amélio
 
 ---
 
-### Réorganisation de l’ordre des attributs et des méthodes
-Les variables et méthodes ont été réorganisées selon les conventions suivantes :
-- Constantes `static final` en haut
-- Attributs d’instance ensuite
-- Méthodes par visibilité : `public`, puis `protected`, `private`
+### Réorganisation de l’ordre des attributs et des méthodes  
+Les variables et méthodes ont été réorganisées selon les conventions suivantes :  
+- Constantes `static final` en haut  
+- Attributs d’instance ensuite  
+- Méthodes par visibilité : `public`, puis `protected`, `private`  
 
 Cela permet une lecture plus cohérente et structurée des classes.
 
@@ -64,60 +64,65 @@ Cela permet une lecture plus cohérente et structurée des classes.
 
 ---
 
-### Lancement d’une exception en cas de valeur non reconnue
+### Lancement d’une exception en cas de valeur non reconnue  
 Une méthode a été modifiée pour qu’elle lève explicitement une exception lorsqu’elle reçoit une valeur invalide ou inconnue. Cela permet d’éviter des comportements silencieux ou inattendus.
 
 **Commit :**  
 - [83536e2](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/83536e284f55c8d063e5c7ab367651d2a81e12f9)
 
 ---
-### Ajout d'un try catch pour gérer les erreurs
-Une méthode a été modifiée pour mieux gérer les exceptions. Cette méthode gérait les exceptions en retournant -1 ce qui pouvait poser problème, car l'erreur n'était pas clairement défini. L'utilisation d'un try catch permet de rendre cela plus clair et de simplifier la gestion des erreurs lorsque cette méthode est appelée.
 
-**Commit :**
-[83536e2](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/f7c3dc30e0f057da7902e3c9c1eda6f2c0ff15ee)
+### Ajout d’un try-catch pour gérer les erreurs  
+Une méthode a été modifiée pour mieux gérer les exceptions. Elle gérait auparavant les erreurs en retournant `-1`, ce qui pouvait poser problème car l’erreur n’était pas clairement définie. L’utilisation d’un bloc `try-catch` permet de clarifier le traitement des erreurs et de simplifier leur gestion.
+
+**Commit :**  
+- [f7c3dc3](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/f7c3dc30e0f057da7902e3c9c1eda6f2c0ff15ee)
 
 ---
 
-### Suppression de code commenté
-Une méthode contenait du code commenté, ce code n'était donc pas utile et nuisait à la clareté.
+### Suppression de code commenté  
+Une méthode contenait du code commenté qui n’était donc pas utile et nuisait à la clarté.
 
-**Commit :**
+**Commit :**  
 - [f2271c8](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/f2271c819a245a10fd50760f190709d06a8090b1)
 
 ---
 
-### Modification du nom d'une classe
-Le nom d'une classe a été mis à jour pour mieux correspondre à sa fonction. C'est une classe de test, il faut donc ajouter le terme 'test' dans le nom de cette classe pour en comprendre la fonction sans avoir à ouvrir la fichier.
+### Modification du nom d’une classe  
+Le nom d’une classe a été mis à jour pour mieux refléter sa fonction. Étant une classe de test, il était pertinent d’ajouter le terme `Test` dans son nom pour en comprendre la finalité sans avoir à ouvrir le fichier.
 
-**Commit :**
-[6c63968](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/6c63968a4486aacc651d1e0fa9e8c3549f980305)
-
-
----
-
-### Ajout d'un test
-Suppression d'un `@ignore` qui empéché l'exécution d'un test sans raison apparente. Cela permet d'avoir une meilleure couverture de test.
-
-**Commit :**
-[9de3777](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/9de37779ca9244c168fdedc3cf939363838a8bbc)
-
+**Commit :**  
+- [6c63968](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/6c63968a4486aacc651d1e0fa9e8c3549f980305)
 
 ---
 
-## Tentatives d'améliorations non aboutis :
+### Ajout d’un test  
+Suppression d’un `@Ignore` qui empêchait l’exécution d’un test sans raison apparente. Cela permet d’améliorer la couverture de test.
+
+**Commit :**  
+- [9de3777](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/9de37779ca9244c168fdedc3cf939363838a8bbc)
 
 ---
 
-### Traduction des commentaires en chinois
-Beaucoup de commentaires sont en chinois, ce qui rend une partie du projet peu clair pour des personnes ne parlant pas cette langue. Il serait donc pertinant d'uniformmiser les commentaires pour qu'ils soient tous propsé en anglais commme c'est déjà le cas pour le readme principale. Néanmoins, ne parlant pas cette langue, je ne peux pas effectuer cette modification.
+## Tentatives d’améliorations non abouties :
 
 ---
 
-### Décomposition d'une "God class"
-J'ai essayé de décomposer la classe `Spider` qui est une God class mais je n'y suis pas parvenu, elle gère beaucoup trop de chose en même temps et il est très difficile de la décomposé à cause de toutes les imbrications. L'idée était de décomposer cette classe en 6 classes. La principale étant `Spider`, qui devait gérer la coordination entres les autres classes, une classe `RequestManager` pour la gestion des requêtes, `PipelineRequest` pour la gestion des pipelines, `DownloaderManager`, pour la gestion des téléchargements. `ThreadManager` pour gérer les threads et `SpiderListenerManager ` pour la gestion des évènements.
+### Traduction des commentaires en chinois  
+Beaucoup de commentaires sont en chinois, ce qui rend une partie du projet peu claire pour les personnes ne parlant pas cette langue. Il serait donc pertinent d’uniformiser les commentaires afin qu’ils soient tous proposés en anglais, comme c’est déjà le cas pour le *README* principal. Néanmoins, ne parlant pas cette langue, je ne peux pas effectuer cette modification.
 
 ---
 
-### Simplification d'un test
-J'ai essayé de modifier la classe de test `XpathSelectorTest` afin de créer un fichier html et appeler ce fichier dans la variable correspondant afin de simplifier la gestion de cette classe mais je n'y suis pas parvenu. J'ai rencontrer des difficultées pour créer le fihcier html du fait de sa taille et du fait qu'il fallait en adapter le format pour qu'il soit valide.
+### Décomposition d’une "God class"  
+J’ai essayé de décomposer la classe `Spider`, qui est une *God class*, mais je n’y suis pas parvenue. Elle gère beaucoup trop de choses à la fois et il est très difficile de la refactorer à cause de toutes ses imbrications. L’idée était de la diviser en six classes :  
+- `Spider`, qui coordonnerait les autres  
+- `RequestManager`, pour la gestion des requêtes  
+- `PipelineRequest`, pour les pipelines  
+- `DownloaderManager`, pour les téléchargements  
+- `ThreadManager`, pour la gestion des threads  
+- `SpiderListenerManager`, pour les événements
+
+---
+
+### Simplification d’un test  
+J’ai tenté de modifier la classe de test `XpathSelectorTest` en créant un fichier HTML, à appeler dans une variable, afin de simplifier la gestion de cette classe. Cependant, je n’y suis pas parvenue. J’ai rencontré des difficultés pour créer le fichier HTML à cause de sa taille, et il fallait également adapter le format pour qu’il soit valide.
