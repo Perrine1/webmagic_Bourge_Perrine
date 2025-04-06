@@ -87,6 +87,24 @@ Une méthode contenait du code commenté, ce code n'était donc pas utile et nui
 
 ---
 
+### Modification du nom d'une classe
+Le nom d'une classe a été mis à jour pour mieux correspondre à sa fonction. C'est une classe de test, il faut donc ajouter le terme 'test' dans le nom de cette classe pour en comprendre la fonction sans avoir à ouvrir la fichier.
+
+**Commit :**
+[6c63968](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/6c63968a4486aacc651d1e0fa9e8c3549f980305)
+
+
+---
+
+### Ajout d'un test
+Suppression d'un `@ignore` qui empéché l'exécution d'un test sans raison apparente. Cela permet d'avoir une meilleure couverture de test.
+
+**Commit :**
+[9de3777](https://github.com/Perrine1/webmagic_Bourge_Perrine/commit/9de37779ca9244c168fdedc3cf939363838a8bbc)
+
+
+---
+
 ## Tentatives d'améliorations non aboutis :
 
 ---
